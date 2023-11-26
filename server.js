@@ -12,10 +12,10 @@ app.use(express.static('./resources/static/assets'))
 app.use(express.urlencoded({ extended: true }));
 initRoutes(app);
 
-db.sequelize.sync();
-// db.sequelize.sync({ force: true }).then(() => {
-//     console.log("Drop and re-sync db.")
-// });
+// db.sequelize.sync();
+db.sequelize.sync({ force: true }).then(() => {
+    console.log("Drop and re-sync db.")
+});
 
 let port = 3000;
 app.listen(port, () => {
