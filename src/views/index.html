@@ -41,32 +41,6 @@
         <ul id="image-list"></ul>
     </div>
 
-    <script>
-        let imageList = document.querySelector('#image-list');
-        
-        fetch('/images')
-            .then(res => res.json())
-            .then(json => {
-                console.log(json[0]);
-                console.log(typeof json);
-
-                for (let image of json) {
-                    console.log(`image name : ${image.name}`)
-                    const baseURL = '/uploads/';
-
-                    const newLi = document.createElement('li');
-                    const img = document.createElement('img');
-                    img.src = `${baseURL}${image.name}`;
-                    img.classList.add('thumbnail');
-                    console.log(img)
-
-                    newLi.appendChild(img);
-                    imageList.appendChild(newLi);
-                }
-            });
-
-    </script>
-
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
 
     <script>
@@ -93,6 +67,25 @@
                     imagesPreview(this, document.querySelector('div.preview-images'));
                 }
             );
+
+
+            let imageList = document.querySelector('#image-list');
+        
+            fetch('/images')
+                .then(res => res.json())
+                .then(json => {
+                    for (let image of json) {
+                        const baseURL = '/uploads/';
+
+                        const newLi = document.createElement('li');
+                        const img = document.createElement('img');
+                        img.src = `${baseURL}${image.name}`;
+                        img.classList.add('thumbnail');
+
+                        newLi.appendChild(img);
+                        imageList.appendChild(newLi);
+                    }
+                });
         });
     </script>
 </body>
