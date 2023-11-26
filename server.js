@@ -5,7 +5,9 @@ const app = express();
 const db = require("./src/models");
 const initRoutes = require("./src/routes/web");
 
-global.__baserdir = __dirname;
+// global.__baserdir = __dirname;
+
+app.use(express.static('./resources/static/assets'))
 
 app.use(express.urlencoded({ extended: true }));
 initRoutes(app);
