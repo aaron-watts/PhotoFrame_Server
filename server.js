@@ -1,4 +1,5 @@
 require('dotenv').config();
+global.__basedir = __dirname;
 const express = require("express");
 const app = express();
 const db = require("./src/models");
