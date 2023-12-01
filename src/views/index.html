@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Node.js upload images</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
     <style>
         div.preview-images>img,
         img.thumbnail {
@@ -41,15 +40,13 @@
         <ul id="image-list"></ul>
     </div>
 
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
-
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             let imagesPreview = function (input, placeToInsertImagePreview) {
                 let filesAmount = input.files.length;
                 for (i = 0; i < filesAmount; i++) {
                         placeToInsertImagePreview.innerHTML = '';
-                        
+
                         let reader = new FileReader();
 
                         reader.addEventListener('load', function(evt) {
