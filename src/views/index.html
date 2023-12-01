@@ -48,6 +48,8 @@
             let imagesPreview = function (input, placeToInsertImagePreview) {
                 let filesAmount = input.files.length;
                 for (i = 0; i < filesAmount; i++) {
+                        placeToInsertImagePreview.innerHTML = '';
+                        
                         let reader = new FileReader();
 
                         reader.addEventListener('load', function(evt) {
