@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+ASSETS_DIR="resources/static/assets"
+THIS_DIR=$(dirname "$0")
+
+rm $THIS_DIR/$ASSETS_DIR/tmp/*.png
+rm $THIS_DIR/$ASSETS_DIR/uploads/*.png
