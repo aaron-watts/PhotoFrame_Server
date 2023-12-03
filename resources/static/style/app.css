@@ -1,6 +1,36 @@
+.thumbnail-container {
+    position: relative;
+    width: 70%;
+}
+
 div.preview-images>img,
 img.thumbnail {
-    width: 70%;
+    width: 100%;
+}
+
+form.form-delete {
+    --form-offset: 12px;
+    position: absolute;
+    bottom: var(--form-offset);
+    right: var(--form-offset);
+}
+
+button.btn-delete {
+    --btn-delete-size: 40px;
+    width: var(--btn-delete-size);
+    height: var(--btn-delete-size);
+    border-radius: 50%;
+    border: none;
+    background: white;
+    /* position: relative; */
+}
+button.btn-delete svg {
+    /* position: absolute;
+    top: 50%;
+    left: 50%; */
+    display: block;
+    margin: auto;
+    transform: scale(120%);
 }
 
 .loader {
