@@ -1,4 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
+    const loader = document.querySelector('#loader');
+
     let imagesPreview = function (input, placeToInsertImagePreview) {
         let filesAmount = input.files.length;
         for (i = 0; i < filesAmount; i++) {
@@ -24,12 +26,14 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     );
 
-
+    loader.classList.remove('loader-hide');
     let imageList = document.querySelector('#image-list');
 
     fetch('/images')
         .then(res => res.json())
         .then(json => {
+            loader.classList.add('loader-hide');
+            
             for (let image of json) {
                 const baseURL = '/assets/uploads/';
 
