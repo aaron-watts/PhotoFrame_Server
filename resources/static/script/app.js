@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 reader.addEventListener('load', function(evt) {
                     const preview = document.createElement('img');
+                    preview.classList.add('thumbnail');
                     preview.src = this.result;
                     const overlay = document.createElement('div');
                     overlay.classList.add('overlay');

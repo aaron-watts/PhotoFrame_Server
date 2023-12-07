@@ -1,3 +1,12 @@
+:root {
+    --white: #f1f1f1;
+    --blue: rgb(8, 66, 173);
+}
+
+body {
+    background: var(--white);
+}
+
 h1, h2 {
     font-family: sans-serif;
     text-align: center;
@@ -6,9 +15,11 @@ h1, h2 {
 h1 {
     font-size: 1.8em;
     font-weight: bold;
+    margin-block: 1em;
 }
 h2 {
     font-size: 1.4em;
+    margin-block: .8em;
 }
 
 .thumbnail-container {
@@ -24,6 +35,7 @@ div.preview-images>img {
 
 img.thumbnail {
     width: 100%;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
 .preview-images {
@@ -55,7 +67,7 @@ img.thumbnail {
 
 form.upload {
     display: block;
-    margin-block: 1em;
+    margin-block: 1.6em;
 }
 
 label.file {
@@ -71,25 +83,31 @@ input[type=file] {
     margin-inline: auto;
     color: #444;
     padding: 5px;
-    background: #fff;
+    background: #f1f1f1;
     border-radius: 10px;
     border: 1px solid #555;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     cursor: pointer;
 }
 
 input[type=file]::file-selector-button,
 .btn-primary {
-    margin-right: 20px;
     border: none;
-    background: #084cdf;
+    background: var(--blue);
     padding: 5px 10px;
     border-radius: 10px;
     color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+input[type=file]::file-selector-button {
+    margin-right: 20px;
 }
 
 .btn-primary {
     display: block;
     margin-inline: auto;
+    margin-block: 1.2em;
 }
 
 form.form-delete {
@@ -107,6 +125,7 @@ button.btn-delete {
     border: none;
     background: white;
     cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 button.btn-delete svg {
