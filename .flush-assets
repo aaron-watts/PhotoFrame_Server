@@ -5,3 +5,7 @@ THIS_DIR=$(dirname "$0")
 
 rm $THIS_DIR/$ASSETS_DIR/tmp/*.png
 rm $THIS_DIR/$ASSETS_DIR/uploads/*.png
+rm $THIS_DIR/$ASSETS_DIR/tmp/*.jpg
+rm $THIS_DIR/$ASSETS_DIR/uploads/*.jpg
+rm $THIS_DIR/$ASSETS_DIR/tmp/*.jpeg
+rm $THIS_DIR/$ASSETS_DIR/uploads/*.jpeg
