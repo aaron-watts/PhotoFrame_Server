@@ -1,15 +1,57 @@
+h1, h2 {
+    font-family: sans-serif;
+    text-align: center;
+}
+
+h1 {
+    font-size: 1.8em;
+    font-weight: bold;
+}
+h2 {
+    font-size: 1.4em;
+}
+
 .thumbnail-container {
     position: relative;
     width: 70%;
+    margin-inline: auto;
+    margin-block: 1em;
 }
 
 div.preview-images>img {
-    width: 50%;
+    width: 100%;
 }
 
 img.thumbnail {
     width: 100%;
 }
+
+.preview-images {
+    position: relative;
+}
+
+.overlay {
+    --color-1: #008cba;
+    --color-2: #73d4f5;
+    --gradient-width: 5%;
+    --gradient-angle: 135deg;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: .15;
+    background: #008CBA;
+    background: repeating-linear-gradient(
+        var(--gradient-angle),
+        var(--color-1),
+        var(--color-1) var(--gradient-width),
+        var(--color-2) var(--gradient-width),
+        var(--color-2) calc(var(--gradient-width) * 2)
+    );
+  }
 
 form.upload {
     display: block;
@@ -110,9 +152,3 @@ button.btn-delete svg {
         transform: rotate(1turn)
     }
 }
-
-/* WTF Forms file input */
-
-/*
- * File
- */

@@ -11,7 +11,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 reader.addEventListener('load', function(evt) {
                     const preview = document.createElement('img');
                     preview.src = this.result;
-                    placeToInsertImagePreview.appendChild(preview)
+                    const overlay = document.createElement('div');
+                    overlay.classList.add('overlay');
+                    placeToInsertImagePreview.appendChild(preview);
+                    placeToInsertImagePreview.appendChild(overlay);
                 })
 
                 reader.readAsDataURL(input.files[i]);

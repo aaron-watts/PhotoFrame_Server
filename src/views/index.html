@@ -11,34 +11,24 @@
 </head>
 
 <body>
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-8 mt-3">
-                <h4>Node.js upload images - bezkoder.com</h4>
+    <h1>YuBin Framed</h1>
 
-                <form class="upload" action="/upload" method="POST" enctype="multipart/form-data">
-                    <!-- <div class="form-group"> -->
-                        <label class="file">
-                            <input type="file" name="file" id="input-files" class="form-control-file border" />
-                            <span class="file-custom"></span>
-                        </label>
-                    <!-- </div> -->
-                    <button type="submit" class="btn-primary">Submit</button>
-                </form>
-            </div>
-        </div>
-        <hr />
-        <div class="row">
-            <div class="col-sm-12">
-                <div class="preview-images"></div>
-            </div>
-        </div>
-    </div>
-    
+    <form class="upload" action="/upload" method="POST" enctype="multipart/form-data">
+        <label class="file">
+            <input type="file" name="file" id="input-files" class="form-control-file border" />
+            <span class="file-custom"></span>
+        </label>
+        <button type="submit" class="btn-primary">Submit</button>
+    </form>
+
+
+    <div class="preview-images thumbnail-container"></div>
+
+
     <div>
         <div id="loader" class="loader loader-hide"></div>
 
-        <h1>Images</h1>
+        <h2>All Images</h2>
         <div id="image-list"></div>
     </div>
 
