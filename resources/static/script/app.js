@@ -19,12 +19,14 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     const fileInput = document.querySelector('#input-files');
+    const imgPreview = document.querySelector('div.preview-images');
 
     fileInput.addEventListener('change', 
         function() {
-            imagesPreview(this, document.querySelector('div.preview-images'));
+            imagesPreview(this, imgPreview);
         }
     );
+    imagesPreview(fileInput, imgPreview);
 
     loader.classList.remove('loader-hide');
     let imageList = document.querySelector('#image-list');
