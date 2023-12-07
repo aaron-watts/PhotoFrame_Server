@@ -61,7 +61,8 @@ const buildImageThumbnail = image => {
     newDiv.classList.add('thumbnail-container');
 
     const img = document.createElement('img');
-    img.src = `${baseURL}${image.name}`;
+    console.log(image)
+    img.src = `${baseURL}${image.id}_${image.name}`;
     img.classList.add('thumbnail');
 
     newDiv.appendChild(img);
@@ -69,6 +70,8 @@ const buildImageThumbnail = image => {
     const newForm = document.createElement('form');
     newForm.classList.add('form-delete');
     newForm.action = '';
+    newForm.id = image.id;
+    newForm.setAttribute('image-name', image.name);
 
     const newBtn = document.createElement('button');
     newBtn.classList.add('btn-delete');
