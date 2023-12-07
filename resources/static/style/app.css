@@ -3,9 +3,51 @@
     width: 70%;
 }
 
-div.preview-images>img,
+div.preview-images>img {
+    width: 50%;
+}
+
 img.thumbnail {
     width: 100%;
+}
+
+form.upload {
+    display: block;
+    margin-block: 1em;
+}
+
+label.file {
+    text-align: center;
+    display: block;
+    margin-block: .5em;
+}
+
+input[type=file] {
+    display: block;
+    width: 350px;
+    max-width: 80%;
+    margin-inline: auto;
+    color: #444;
+    padding: 5px;
+    background: #fff;
+    border-radius: 10px;
+    border: 1px solid #555;
+    cursor: pointer;
+}
+
+input[type=file]::file-selector-button,
+.btn-primary {
+    margin-right: 20px;
+    border: none;
+    background: #084cdf;
+    padding: 5px 10px;
+    border-radius: 10px;
+    color: #fff;
+}
+
+.btn-primary {
+    display: block;
+    margin-inline: auto;
 }
 
 form.form-delete {
@@ -22,12 +64,10 @@ button.btn-delete {
     border-radius: 50%;
     border: none;
     background: white;
-    /* position: relative; */
+    cursor: pointer;
 }
+
 button.btn-delete svg {
-    /* position: absolute;
-    top: 50%;
-    left: 50%; */
     display: block;
     margin: auto;
     transform: scale(120%);
@@ -60,6 +100,7 @@ button.btn-delete svg {
     box-sizing: border-box;
     animation: load 1s linear infinite;
 }
+
 .loader-hide {
     display: none;
 }
@@ -69,3 +110,9 @@ button.btn-delete svg {
         transform: rotate(1turn)
     }
 }
+
+/* WTF Forms file input */
+
+/*
+ * File
+ */

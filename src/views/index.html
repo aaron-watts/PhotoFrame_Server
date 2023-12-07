@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Node.js upload images</title>
-    <link rel="stylesheet" href="style/app.css">
     <link rel="stylesheet" href="style/reset.css">
+    <link rel="stylesheet" href="style/app.css">
 </head>
 
 <body>
@@ -16,11 +16,14 @@
             <div class="col-sm-8 mt-3">
                 <h4>Node.js upload images - bezkoder.com</h4>
 
-                <form class="mt-4" action="/upload" method="POST" enctype="multipart/form-data">
-                    <div class="form-group">
-                        <input type="file" name="file" id="input-files" class="form-control-file border" />
-                    </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                <form class="upload" action="/upload" method="POST" enctype="multipart/form-data">
+                    <!-- <div class="form-group"> -->
+                        <label class="file">
+                            <input type="file" name="file" id="input-files" class="form-control-file border" />
+                            <span class="file-custom"></span>
+                        </label>
+                    <!-- </div> -->
+                    <button type="submit" class="btn-primary">Submit</button>
                 </form>
             </div>
         </div>
