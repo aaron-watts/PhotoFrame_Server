@@ -5,8 +5,6 @@ const Image = db.images;
 
 const uploadFiles = async (req, res) => {
     try {
-        console.log(req.file);
-
         if (req.file == undefined) {
             return res.send(`You must select a file.`);
         }
@@ -19,7 +17,6 @@ const uploadFiles = async (req, res) => {
             ),
         }).then((image) => {
             fs.writeFileSync(
-                // __basedir + "/resources/static/assets/tmp/" + image.name,
                 `${__basedir}/resources/static/assets/uploads/${image.id}_${image.name}`,
                 image.data
             );

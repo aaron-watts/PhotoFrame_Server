@@ -70,8 +70,9 @@ const buildImageThumbnail = image => {
 
     const newForm = document.createElement('form');
     newForm.classList.add('form-delete');
-    newForm.action = '';
-    newForm.id = image.id;
+    newForm.method = 'POST';
+    newForm.action = `/${image.id}?_method=DELETE`;
+    newForm.id = `id${image.id}`;
     newForm.setAttribute('image-name', image.name);
 
     const newBtn = document.createElement('button');

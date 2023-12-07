@@ -5,9 +5,12 @@ const app = express();
 const db = require("./src/models");
 const initRoutes = require("./src/routes/web");
 
+const methodOverride = require('method-override');
+
 app.use(express.static('./resources/static'))
 
 app.use(express.urlencoded({ extended: true }));
+app.use(methodOverride('_method'));
 initRoutes(app);
 
 db.sequelize.sync();
